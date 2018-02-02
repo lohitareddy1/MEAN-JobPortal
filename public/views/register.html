@@ -1,0 +1,28 @@
+<div class="col-md-6 col-md-offset-3">
+    <h2>Register</h2>
+    <form class="form-group">
+            <label for="username">User name</label>
+        <input class="form-control" type="text" class="form-control" placeholder="Username" ng-model="user.username">
+        <br>
+        <label for="username">Password</label>
+        <input class="form-control" type="password" class="form-control" placeholder="Password" ng-model="user.password">
+        
+        <br>
+        <label for="username">Email</label>
+        <input class="form-control" type="email" class="form-control" placeholder="Email" ng-model="user.email">
+        <br>
+        <label for="username">Location</label>
+        <input class="form-control" type="text" class="form-control" placeholder="Location" ng-model="user.location">
+        <br>
+        <label for="username">Phone</label>
+        <input class="form-control" type="number" class="form-control" placeholder="Phone" ng-model="user.phone">
+        <br>
+        <label for="usertype">User Type:</label>
+        <input type="radio" name="usertype" value="Company" checked ng-model="user.usertype"> Company
+        <input type="radio" name="usertype" value="Job Seeker" ng-model="user.usertype"> Job Seeker<br>
+        <br>
+
+        <button class="btn btn-primary " ng-click="clickFn()">Register</button>
+    </form>
+
+</div>

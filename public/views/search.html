@@ -1,0 +1,38 @@
+
+<div h1 data-ng-init="checkuser()">
+<form ng-submit="search()">
+    <input type="text" placeholder="Search by title" ng-model="searchterm.title">
+    <input type="text" placeholder="Search by keyword" ng-model="searchterm.keyword">
+    <input type="text" placeholder="Search by location" ng-model="searchterm.location">
+    <input type="submit" value="Search" />
+    <input type="reset" value="Reset" ng-click="reset()" />
+</form>
+
+<!-- <div class ="card">
+<div class = "card-body" ng-model="results">
+    <p > 
+        <b>Title:{{result.title}}</b><br>
+    <i>Description:{{result.description}}</i></p>
+</div> -->
+<!-- <div ng-model="results">
+   
+<div class="alert alert-warning alert-dismissible" role="alert" ng-repeat="result in results.data">
+   
+    <strong>{{result.title}}</strong> 
+    <br>{{result.description}}
+  </div>
+</div> -->
+
+<div ng-model="results">
+
+    <div ng-repeat="result in results.data" class="panel panel-info">
+        <div class="panel-heading">
+            {{result.title}}
+        </div>
+        <div class="panel-body">
+            {{result.description}}
+        </div>
+
+    </div>
+</div>
+</div>

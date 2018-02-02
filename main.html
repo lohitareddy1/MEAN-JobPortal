@@ -1,0 +1,28 @@
+<html>
+
+<head>
+<title>Angular App</title>
+
+<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" />
+</head>
+
+<body ng-app="myapp">
+    <nav>
+        <a href="#/" ng-show="!username">Login</a>&emsp;
+        <a href="#/register"  ng-show="!username">Create User</a>&emsp;
+        <a href="#/search" ng-hide="usertype== undefined||usertype== ''||usertype == 'Company'">Search</a>&emsp;
+        <a href="#/post" ng-hide="usertype== undefined||usertype== ''||usertype == 'Job Seeker'">Post</a>&emsp;
+        
+        <button ng-show="username!=''" type="button" ng-click="logout()"  ng-hide="username == ''"  class="btn btn-primary">Logout</button>
+       
+    </nav>
+    
+    <ng-view></ng-view>
+    <script src="//code.angularjs.org/1.5.5/angular.js"></script>
+    <script src="//code.angularjs.org/1.5.5/angular-route.js"></script>
+    <script src="//code.angularjs.org/1.6.0/angular-cookies.js"></script>
+    <script src="../js/app.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+</body>
+
+</html>
